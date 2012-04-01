@@ -1,0 +1,12 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !^/admin/pma
+RewriteCond %{REQUEST_URI} !(\.js|\.css|\.gif|\.jpg|\.png|\.ico|\.xml|\.swf)$
+RewriteCond %{REQUEST_URI} !^/admin/mysql-stats.php
+RewriteCond %{REQUEST_URI} !^/admin/phpsysinfo
+RewriteCond %{REQUEST_URI} !^/js/tiny_mce/
+RewriteCond %{REQUEST_URI} !^/sitemap.xml
+RewriteCond %{REQUEST_URI} !^/robots.txt
+
+RewriteRule .* index.php
